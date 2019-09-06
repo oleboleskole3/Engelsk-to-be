@@ -20,6 +20,8 @@ function setup() {
     music.setVolume(.7);
     music.playMode("untilDone");
     ding.setVolume(.3);
+    wrong.setVolume(.3);
+    death.setVolume(.3);
 }
 
 function draw() {
