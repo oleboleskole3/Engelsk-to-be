@@ -4,12 +4,14 @@ let levels = [
     "Yesterday I ____ at the mall","4"
 ];
 
-let music, ding, dead = false, lives = livesMax = 3, failTime = 2.5*30, fail, score = 0, level = 1;
+let music, ding, death, wrong, dead = false, lives = livesMax = 3, failTime = 2.5*30, fail, score = 0, level = 1;
 
 function preload() {
-    soundFormats('mp3', 'wav');
+    soundFormats('mp3');
     music = loadSound('Music.mp3');
     ding = loadSound('Ding.mp3');
+    wrong = loadSound('Wrong.mp3');
+    death = loadSound('Death.mp3');
 }
 
 function setup() {
@@ -67,7 +69,8 @@ function keyPressed() {
             lives--;
             dead = lives < 1;
             fail = failTime*(dead?2:1);
-            score -= 5
+            (dead?death:wrong).play();
+            score -= 5;
         }
     }
 }
