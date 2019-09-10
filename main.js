@@ -1,7 +1,14 @@
 let levels = [
     "Yesterday I ____ at the gas station.", "4",
-    "I ____ going to be at the gas station", "1",
-    "Yesterday I ____ at the mall","4"
+    "I ____ going to be at the gas station tomorrow", "1",
+    "Yesterday I ____ at the mall","4",
+    "I ____ at the mall yesterday","4",
+    "I ____ going to be at the mall tomorrow","1",
+    "I ____ very stupid yesterday","4",
+    "You ____ not funny last night","5",
+    "He ____ weird last night","4",
+    "They ____ comming tomorrow","2",
+    "We ____ comming in a week","2"
 ];
 
 let music, ding, death, wrong, dead = false, lives = livesMax = 3, failTime = 2.5*30, fail, score = 0, level = 1;
